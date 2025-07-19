@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="header">
+    <h1>User Management</h1>
+    <button mat-raised-button color="primary" (click)="openAddUserModal()">
+      Add User
+    </button>
+  </div>
+
+  <div class="loading-container" *ngIf="userService.loading()">
+    <mat-spinner></mat-spinner>
+  </div>
+
+  <app-user-list
+    *ngIf="!userService.loading()"
+    [users]="userService.users()"
+  ></app-user-list>
+</div> 

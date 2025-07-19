@@ -1,1 +1,92 @@
 /* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+/* Dialog Styles */
+.add-user-dialog {
+  position: relative;
+}
+
+.add-user-dialog .mat-mdc-dialog-container {
+  padding: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 11px 15px -7px rgba(0,0,0,.2), 
+              0 24px 38px 3px rgba(0,0,0,.14), 
+              0 9px 46px 8px rgba(0,0,0,.12);
+}
+
+.add-user-dialog .mat-mdc-dialog-surface {
+  border-radius: 8px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.no-scroll .mat-mdc-dialog-container .mat-mdc-dialog-surface {
+  overflow: hidden;
+}
+
+.no-scroll mat-dialog-container {
+  overflow: hidden !important;
+}
+
+/* Form Field Styles */
+.mat-mdc-form-field {
+  font-size: 16px;
+  width: 100%;
+}
+
+.mat-mdc-form-field-subscript-wrapper {
+  font-size: 12px;
+}
+
+.mdc-text-field--outlined {
+  border-radius: 4px;
+  background-color: #ffffff;
+}
+
+.mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input {
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.mdc-text-field:not(.mdc-text-field--disabled) .mdc-floating-label {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+/* Button Styles */
+.mat-mdc-raised-button {
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+}
+
+/* Table Loading Styles */
+.table-loading-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.table-container {
+  position: relative;
+  min-height: 200px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 480px) {
+  .mat-mdc-dialog-container {
+    max-width: 100vw !important;
+  }
+  
+  .mat-mdc-form-field {
+    font-size: 14px;
+  }
+}

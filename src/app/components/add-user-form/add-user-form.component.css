@@ -1,0 +1,131 @@
+.dialog-container {
+  padding: 24px;
+  width: fit-content;
+  min-width: 500px;
+   
+}
+
+
+h2[mat-dialog-title] {
+  margin: 0 0 24px;
+  color: #1976d2;
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+}
+
+mat-dialog-content {
+  padding: 0 !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+}
+
+.add-user-form {
+  gap: 16px;
+  position: relative;
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form-loading-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+  border-radius: 4px;
+}
+
+mat-form-field {
+  width: 100%;
+}
+
+.name-form-field {
+  padding-top: 10px;
+}
+
+:host ::ng-deep .mat-mdc-form-field {
+  width: 100%;
+}
+
+:host ::ng-deep .mdc-text-field {
+  padding: 0 4px;
+}
+
+:host ::ng-deep .mdc-text-field--outlined {
+  --mdc-outlined-text-field-outline-color: #e0e0e0;
+  --mdc-outlined-text-field-hover-outline-color: #1976d2;
+  --mdc-outlined-text-field-focus-outline-color: #1976d2;
+}
+
+:host ::ng-deep .mdc-text-field--focused:not(.mdc-text-field--disabled) .mdc-floating-label {
+  color: #1976d2;
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 8px;
+  padding-top: 16px;
+  border-top: 1px solid #e0e0e0;
+}
+
+button {
+  min-width: 100px;
+  padding: 8px 24px;
+}
+
+button[type="submit"] {
+  background-color: #1976d2;
+}
+
+button[type="submit"]:hover:not([disabled]) {
+  background-color: #1565c0;
+}
+
+button[type="submit"][disabled] {
+  background-color: rgba(0, 0, 0, 0.12);
+  color: rgba(0, 0, 0, 0.38);
+}
+
+button[type="button"] {
+  color: #666;
+}
+
+button[type="button"]:hover:not([disabled]) {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+button[disabled] {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+@media (max-width: 480px) {
+  .dialog-container {
+    padding: 16px;
+  }
+
+  h2[mat-dialog-title] {
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+
+  .form-actions {
+    flex-direction: column-reverse;
+    gap: 8px;
+  }
+
+  button {
+    width: 100%;
+  }
+} 
